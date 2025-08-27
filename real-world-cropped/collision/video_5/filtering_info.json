@@ -1,0 +1,26 @@
+{
+  "experiment": "collision",
+  "model": "real-world",
+  "conditioning": null,
+  "prompt_type": "null",
+  "path_to_video": "real-world-cropped/collision/video_5_fps30/cropped_video.mp4",
+  "path_to_frames": "real-world-cropped/collision/video_5_fps30/frames_for_tracking",
+  "trajectory_filtering": {
+    "discard_details": {
+      "1": {
+        "is_discarded": false,
+        "discard_reason": null,
+        "shortened_trajectory": false
+      },
+      "2": {
+        "is_discarded": false,
+        "discard_reason": null,
+        "shortened_trajectory": false
+      }
+    },
+    "gap_threshold": 0.15,
+    "min_trajectory_length": 0.15,
+    "min_valid_percentage": 0.15
+  },
+  "is_most_probable": null
+}
