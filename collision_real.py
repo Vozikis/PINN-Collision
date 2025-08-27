@@ -246,9 +246,9 @@ def mlp_predict_masses(model, t, x):
     m = model(feat_n.unsqueeze(0)).squeeze(0)                          
     return float(m[0].item()), float(m[1].item())
 
-def load_trajectories(base_directory, file_name, kernel_size=25):
+def load_trajectories(base_directory, file_name):
     all_trajectories = []
-    for trajectory_number in range(9):
+    for trajectory_number in range(10):
         video_dir = os.path.join(base_directory, f"video_{trajectory_number}")
         file_path = os.path.join(video_dir, file_name)
         
@@ -368,7 +368,7 @@ if __name__ == "__main__":
     mass_mlp = train_mass_mlp(
         num_sims=4000, epochs=1000, lr=1e-3, 
         T=2.0, N=400,              
-        v1_range=(0.5,5.0), v2_range=(-0.5,1.0),
+        v1_range=(0.5,5.0), v2_range=(0.5,5.0),
         m_range=(0.5,20.0), device=device, verbose=True
     )
 
